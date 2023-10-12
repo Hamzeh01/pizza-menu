@@ -88,13 +88,14 @@ function Menu() {
 
           <ul className="pizzas">
             {pizzas.map((pizza) => (
-              <Pizza pizzaObj={pizza} key={pizza.name} />
+              <Pizza pizzaItem={pizza} key={pizza.name} />
             ))}
           </ul>
         </>
       ) : (
         <p>We're still working on our menu. Please come back later :)</p>
       )}
+      ;
     </main>
   );
 }
@@ -102,7 +103,7 @@ function Menu() {
 function Pizza({ pizzaItem }) {
   return (
     <li className={`pizza ${pizzaItem.soldOut ? "sold-out" : ""}`}>
-      <img src="{pizzaItem.photoName}" alt="pizzaItem.name" />
+      <img src={pizzaItem.photoName} alt={pizzaItem.name} />
       <div>
         <h3>{pizzaItem.name}</h3>
         <p>{pizzaItem.ingredients}</p>
