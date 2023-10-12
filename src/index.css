@@ -142,6 +142,7 @@ body {
 
 .pizza.sold-out {
   color: #888;
+  text-transform: uppercase;
 }
 
 .pizza.sold-out img {
