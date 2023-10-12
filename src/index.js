@@ -114,7 +114,7 @@ function Pizza({ pizzaItem }) {
 }
 
 function Footer() {
-  const hour = new Date.getHours();
+  const hour = new Date().getHours();
   const openHour = 12;
   const closeHour = 23;
   const isOpen = hour >= openHour && hour <= closeHour;
@@ -132,4 +132,14 @@ function Footer() {
   );
 }
 
-function Order({}) {}
+function Order({ closeHour, openHour }) {
+  return (
+    <div className="order">
+      <p>
+        We're open from {openHour}:00 to {closeHour}:00. Come visit us or order
+        online.
+      </p>
+      <button className="btn">Order</button>
+    </div>
+  );
+}
