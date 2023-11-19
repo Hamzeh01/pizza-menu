@@ -10,7 +10,7 @@ function Menu() {
       <h2>Our Menu</h2>
       {pizzaNo > 0 ? (
         <>
-          <p>
+          <p className="menu-text">
             Authentic Italian cuisine. 6 creative dishes to choose from. All
             from our stone oven, all organic, all delicious.
           </p>
@@ -24,7 +24,6 @@ function Menu() {
       ) : (
         <p>We're still working on our menu. Please come back later :)</p>
       )}
-      ;
     </main>
   );
 }
