@@ -63,35 +63,38 @@ h6 {
   overflow-wrap: break-word;
 }
 
-.container {
-  max-width: 80rem;
-  margin: 0 auto;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4.8rem;
-}
-
-/* *************** */
-
-.header {
-  align-self: stretch;
-}
-
-.header h1 {
-  /* Non-accessible color */
-  color: #edc84b;
-  /* color: #af8602; */
-
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 5.2rem;
-  font-weight: 300;
-  letter-spacing: 3px;
-  position: relative;
+.App {
   width: 100%;
-  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem 0 1rem;
+  position: relative;
+  overflow: visible;
+}
+
+h1 {
+  position: relative;
+  font-family: "Luckiest Guy";
+  -webkit-text-stroke: 2px var(--Primary-accent);
+  color: var(--secondary-accent);
+  text-align: center;
+  font-size: 4rem;
+}
+
+h2 {
+  text-align: center;
+  border-top: 2px solid var(--text-color);
+  border-bottom: 2px solid var(--text-color);
+  font-size: 2rem;
+  font-weight: bold;
+  width: fit-content;
+  margin: 2.5rem auto 1.25rem auto;
+}
+
+h3 {
+  font-weight: bold;
+  margin-bottom: 4px;
+  text-align: center;
 }
 
 .header h1::before,
@@ -99,8 +102,8 @@ h6 {
   display: block;
   content: "";
   height: 3px;
-  width: 5.25rem;
-  background-color: #edc84b;
+  width: 4rem;
+  background-color: var(--Primary-accent);
   position: absolute;
   top: calc(50% - 1px);
 }
@@ -113,7 +116,15 @@ h6 {
   right: 0;
 }
 
-/* *************** */
+.menu-text {
+  margin: 0 auto 1.875rem auto;
+  text-align: center;
+  font-size: 1.25rem;
+  width: 100%;
+  max-width: 600px;
+  font-style: italic;
+  overflow-wrap: break-word;
+}
 
 .menu {
   display: flex;
@@ -194,7 +205,44 @@ h6 {
 
 /* *************** */
 
-.footer {
+footer {
+  margin-top: 3.125rem;
+}
+
+.order-text {
+  text-align: center;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--Primary-accent);
+  border: none;
+  font-size: 1.25rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.875rem auto;
+  font-weight: bold;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  opacity: 0.7;
+  transform: scale(0.9);
+}
+
+/* .footer {
   font-size: 1.4rem;
 }
 
@@ -215,11 +263,11 @@ h6 {
   padding: 1.4rem 3.2rem;
   cursor: pointer;
   transition: all 0.2s;
-}
+} */
 
-.btn:hover {
+/* .btn:hover {
   background-color: #e9bb24;
-}
+} */
 
 /*
 SPACING SYSTEM (px)
