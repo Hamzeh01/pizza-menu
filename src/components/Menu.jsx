@@ -6,7 +6,7 @@ function Menu() {
   const pizzaNo = pizzas.length;
 
   return (
-    <main className="menu">
+    <main>
       <h2>Our Menu</h2>
       {pizzaNo > 0 ? (
         <>
@@ -15,7 +15,7 @@ function Menu() {
             from our stone oven, all organic, all delicious.
           </p>
 
-          <ul className="pizzas">
+          <ul>
             {pizzas.map((pizza) => (
               <Pizza pizzaItem={pizza} key={pizza.name} />
             ))}

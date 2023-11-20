@@ -12,7 +12,7 @@
   7. Avoid text overflows.
 */
 :root {
-  --background-color: #f7f2e9;
+  --background-color: #fcf8f2;
   --Primary-accent: #edc84b;
   --secondary-accent: #e84545;
   --text-color: #333;
@@ -97,6 +97,56 @@ h3 {
   text-align: center;
 }
 
+ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+li {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  background-color: var(--background-color);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  border: 2px solid black;
+  border-radius: 4px;
+  margin-bottom: 1.875rem;
+  padding-right: 0.25rem;
+  transition: 0.3s all;
+  cursor: pointer;
+}
+
+li:hover {
+  transform: scale(1.03);
+}
+
+img {
+  float: left;
+  margin-right: 0.625rem;
+  border-radius: 4px 0 0 4px;
+  height: 100%;
+}
+
+.sold {
+  position: absolute;
+  left: -20px;
+  top: -10px;
+  padding: 0.25rem 0.625rem;
+  transform: rotate(-25deg);
+  background-color: var(--Primary-accent);
+  border-radius: 4px;
+}
+
+.menu-box {
+  margin: auto 0;
+  text-align: center;
+}
+
 .menu-text {
   margin: 0 auto 1.875rem auto;
   text-align: center;
@@ -107,7 +157,7 @@ h3 {
   overflow-wrap: break-word;
 }
 
-.menu {
+/* .menu {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -123,9 +173,9 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 500;
-}
+} */
 
-.menu > p {
+/* .menu > p {
   font-size: 1.5rem;
   text-align: center;
   line-height: 1.6;
@@ -182,7 +232,7 @@ h3 {
 .pizza.sold-out img {
   filter: grayscale();
   opacity: 0.8;
-}
+} */
 
 /* *************** */
 
@@ -223,32 +273,23 @@ button:active {
   transform: scale(0.9);
 }
 
-/* .footer {
-  font-size: 1.4rem;
+.pizza.sold-out img {
+  filter: grayscale();
+  opacity: 0.8;
 }
 
-.order {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2.4rem;
+.pizza.sold-out .menu-box {
+  opacity: 0.5;
 }
 
-.btn {
-  color: inherit;
-  font-family: inherit;
-  border: none;
-  font-size: 1.4rem;
-  font-weight: 500;
-  background-color: #edc84b;
-  padding: 1.4rem 3.2rem;
-  cursor: pointer;
-  transition: all 0.2s;
-} */
-
-/* .btn:hover {
-  background-color: #e9bb24;
-} */
+@media screen and (max-width: 768px) {
+  ul {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
 
 /*
 SPACING SYSTEM (px)
